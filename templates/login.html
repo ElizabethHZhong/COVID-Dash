@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+ 
+{% block title %}
+   Login
+{% endblock %}
+ 
+{% block main %}
+   <form action="/login" method="post">
+       <div class="login">
+           <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+       </div>
+       <p></p>
+       <div class="login">
+           <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+       </div>
+       <p></p>
+       <div class="login">
+           <select name="college">
+               <option disabled selected value="">College</option>
+               {% for college in colleges %}
+                   <option value="{{ college }}">{{ college }}</option>
+               {% endfor %}
+           </select>
+       </div>
+       <p></p>
+       <button class="btn btn-primary" type="submit">Login</button>
+   </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+ 
+{% block title %}
+   Input
+{% endblock %}
+ 
+{% block main %}
+   <form action="/input" method="post">
+       <div class="input">
+           <p>
+               I tested
+               <select name="positivenegative">
+                   <option disabled selected>(covid test result)</option>
+                   <option value="positive">Positive</option>
+                   <option value="negative">Negative</option>.
+               </select>
+               <p></p>
+               <button class="btn btn-primary" type="submit">Submit</button>
+           </p>
+       </div>
+   </form>
+{% endblock %}
